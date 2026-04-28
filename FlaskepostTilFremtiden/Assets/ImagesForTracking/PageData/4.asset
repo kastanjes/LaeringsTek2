@@ -17,5 +17,5 @@ MonoBehaviour:
   uiPageType: 0
   followupText: 
   showContinueButton: 0
-  arPrefab: {fileID: 0}
+  arPrefab: {fileID: 1857233053439791749, guid: 11597d9da7143904d9dbac9548680166, type: 3}
   audioClip: {fileID: 8300000, guid: ef3ba11b8bf65e74295b9d2e29907326, type: 3}
