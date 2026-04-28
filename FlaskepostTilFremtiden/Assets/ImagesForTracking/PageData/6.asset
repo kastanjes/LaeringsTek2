@@ -16,6 +16,11 @@ MonoBehaviour:
   appState: 2
   uiPageType: 0
   followupText: 
-  showContinueButton: 0
-  arPrefab: {fileID: 0}
+  showContinueButton: 1
+  continueTexts:
+  - '"Du har fundet mig!" siger flaskeposten'
+  - "\"Vi skal hj\xE6lpe b\xF8rnene\""
+  - "\"Vi kan hj\xE6lpe, du og jeg!\""
+  returnToScanningAfterTexts: 1
+  arPrefab: {fileID: 1554958722617872509, guid: fe9d19e7ff1d1ee47b8f8ba86458327b, type: 3}
   audioClip: {fileID: 0}

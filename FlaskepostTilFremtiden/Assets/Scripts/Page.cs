@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewPage", menuName = "Book/Page")]
@@ -13,6 +14,10 @@ public class Page : ScriptableObject
     public UIPageType uiPageType;
     [TextArea] public string followupText;
     public bool showContinueButton;
+
+    [Header("Continue Flow")]
+    [TextArea] public List<string> continueTexts = new List<string>();
+    public bool returnToScanningAfterTexts = true;
 
     [Header("AR")]
     public GameObject arPrefab;

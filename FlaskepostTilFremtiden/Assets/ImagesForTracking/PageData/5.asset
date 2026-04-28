@@ -16,6 +16,8 @@ MonoBehaviour:
   appState: 2
   uiPageType: 0
   followupText: 
-  showContinueButton: 0
-  arPrefab: {fileID: 0}
+  showContinueButton: 1
+  continueTexts: []
+  returnToScanningAfterTexts: 1
+  arPrefab: {fileID: 6713829004114827741, guid: 08ec408a6ae358a4b9f34f9b4657b571, type: 3}
   audioClip: {fileID: 0}

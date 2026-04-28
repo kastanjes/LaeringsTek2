@@ -12,6 +12,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text followupTextLabel;
     [SerializeField] private GameObject continueButton;
 
+    [SerializeField] private GameObject introTextObject;
+    [SerializeField] private GameObject followupTextObject;
+
+
     public void HideAllUI()
     {
         if (scanningPanel != null)
@@ -63,5 +67,17 @@ public class UIManager : MonoBehaviour
     {
         if (followupTextLabel != null)
             followupTextLabel.text = page.followupText;
+    }
+
+    public void ShowCustomText(string text)
+    {
+        if (introTextObject != null)
+            introTextObject.SetActive(false);
+
+        if (followupTextObject != null)
+            followupTextObject.SetActive(true);
+
+        if (followupTextLabel != null)
+            followupTextLabel.text = text;
     }
 }

@@ -13,13 +13,14 @@ public class AppManager : MonoBehaviour
 
     private Page currentPage;
     private AppState currentState = AppState.Scanning;
+    private int currentContinueIndex = 0;
+    private string currentImageName;
+
 
     private void Start()
     {
         SetState(AppState.Scanning, null);
     }
-
-    private string currentImageName;
 
     public void HandleTrackedImage(string imageName, Transform imageTransform)
     {
@@ -37,7 +38,11 @@ public class AppManager : MonoBehaviour
         }
 
         currentImageName = imageName;
+
         currentPage = foundPage;
+
+        currentContinueIndex = 0;
+        
         SetState(currentPage.appState, imageTransform);
     }
 
@@ -81,7 +86,27 @@ public class AppManager : MonoBehaviour
         if (currentPage == null)
             return;
 
-        if (uiManager != null)
-            uiManager.ShowFollowupText(currentPage);
+        if (currentPage.continueTexts != null && currentContinueIndex < currentPage.continueTexts.Count)
+        {
+            uiManager.ShowCustomText(currentPage.continueTexts[currentContinueIndex]);
+            currentContinueIndex++;
+            return;
+        }
+
+        if (currentPage.returnToScanningAfterTexts)
+        {
+            ResetToScanning();
+        }
+    }
+
+    public void ResetToScanning()
+    {
+        currentPage = null;
+        currentContinueIndex = 0;
+
+        if (arContentManager != null)
+            arContentManager.ClearContent();
+
+        SetState(AppState.Scanning, null);
     }
 }
