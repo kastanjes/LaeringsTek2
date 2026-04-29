@@ -25,6 +25,15 @@ extern void U3CU3Ec__DisplayClass9_0_U3CHandleTrackedImageU3Eb__0_m7E5ED3269A216
 extern void ARContentManager_ShowPageAR_m3ADF1D24F1D67225F69337F39929499D6EF1B407 (void);
 extern void ARContentManager_ClearContent_mEAEFA0977FA3B73BCC7405BAE1ED422E38E7180E (void);
 extern void ARContentManager__ctor_m4A24472CEDA7C86B40D9CE3AA5474D300BD991FB (void);
+extern void ARSceneSequence_Start_mCB52E9F3FFEBA70D37E476682627929B8D27DF7B (void);
+extern void ARSceneSequence_PlaySequence_mDB28AC0A4D1E2C792C52EC1DE81A3C2DC1A809E0 (void);
+extern void ARSceneSequence__ctor_m304E28577C380F6CC4E217602C948C3DB21E9BD4 (void);
+extern void U3CPlaySequenceU3Ed__4__ctor_m0D4B37FDB7CC25F799582323BEC6E1AA75FFAE07 (void);
+extern void U3CPlaySequenceU3Ed__4_System_IDisposable_Dispose_mA60F116E0DB59C3AB27879B5B1B78AC154F6F97B (void);
+extern void U3CPlaySequenceU3Ed__4_MoveNext_m76AB272AFD961CD7AEB65813B80EFF85C53AAC18 (void);
+extern void U3CPlaySequenceU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE78DAA56D2D6CF865B15EEAB665EB47DCF2E6611 (void);
+extern void U3CPlaySequenceU3Ed__4_System_Collections_IEnumerator_Reset_mC3DB5EF082AC283293724F50B93D2E4A3DFD91F9 (void);
+extern void U3CPlaySequenceU3Ed__4_System_Collections_IEnumerator_get_Current_mF9FDEA2FFFAD4300DA8888B056DA7FB775DF18A3 (void);
 extern void AudioManager_PlayPageAudio_m7C08F2CAA363F5B3FAC934BDB1354320DEC6C2AB (void);
 extern void AudioManager_StopAudio_mEC41F5F64A83F96B7C971800BED6CC6A82178E4E (void);
 extern void AudioManager_ToggleMute_m41E7CCA05BB86612E2E9C9AB1F9907FF48278028 (void);
@@ -177,7 +186,7 @@ extern void U3CWaitUntilNextCardU3Ed__36_MoveNext_mEB6BA70FAED1CFCFF4A723EA3EAB8
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB2315FB1F67F06B37604285AD8F003E282D1607 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m5E5CC9DFDC8C17DB423A7C7ECBCD4342A7754633 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_mE7D77BA338B271D9E95117683B19436CFFF37229 (void);
-static Il2CppMethodPointer s_methodPointers[170] = 
+static Il2CppMethodPointer s_methodPointers[179] = 
 {
 	Door_Start_m21FDBEEE08A08BAED224B9928B91C5AB578FF330,
 	Door_OnTriggerEnter_m4F2D74E90F3519BC737F450B2E85638F725C611F,
@@ -197,6 +206,15 @@ static Il2CppMethodPointer s_methodPointers[170] =
 	ARContentManager_ShowPageAR_m3ADF1D24F1D67225F69337F39929499D6EF1B407,
 	ARContentManager_ClearContent_mEAEFA0977FA3B73BCC7405BAE1ED422E38E7180E,
 	ARContentManager__ctor_m4A24472CEDA7C86B40D9CE3AA5474D300BD991FB,
+	ARSceneSequence_Start_mCB52E9F3FFEBA70D37E476682627929B8D27DF7B,
+	ARSceneSequence_PlaySequence_mDB28AC0A4D1E2C792C52EC1DE81A3C2DC1A809E0,
+	ARSceneSequence__ctor_m304E28577C380F6CC4E217602C948C3DB21E9BD4,
+	U3CPlaySequenceU3Ed__4__ctor_m0D4B37FDB7CC25F799582323BEC6E1AA75FFAE07,
+	U3CPlaySequenceU3Ed__4_System_IDisposable_Dispose_mA60F116E0DB59C3AB27879B5B1B78AC154F6F97B,
+	U3CPlaySequenceU3Ed__4_MoveNext_m76AB272AFD961CD7AEB65813B80EFF85C53AAC18,
+	U3CPlaySequenceU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE78DAA56D2D6CF865B15EEAB665EB47DCF2E6611,
+	U3CPlaySequenceU3Ed__4_System_Collections_IEnumerator_Reset_mC3DB5EF082AC283293724F50B93D2E4A3DFD91F9,
+	U3CPlaySequenceU3Ed__4_System_Collections_IEnumerator_get_Current_mF9FDEA2FFFAD4300DA8888B056DA7FB775DF18A3,
 	AudioManager_PlayPageAudio_m7C08F2CAA363F5B3FAC934BDB1354320DEC6C2AB,
 	AudioManager_StopAudio_mEC41F5F64A83F96B7C971800BED6CC6A82178E4E,
 	AudioManager_ToggleMute_m41E7CCA05BB86612E2E9C9AB1F9907FF48278028,
@@ -353,9 +371,9 @@ static Il2CppMethodPointer s_methodPointers[170] =
 extern void Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x0600008F, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
+	{ 0x06000098, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[170] = 
+static const int32_t s_InvokerIndices[179] = 
 {
 	16790,
 	12777,
@@ -375,6 +393,15 @@ static const int32_t s_InvokerIndices[170] =
 	6523,
 	16790,
 	16790,
+	16790,
+	16570,
+	16790,
+	12705,
+	16790,
+	16352,
+	16570,
+	16790,
+	16570,
 	12777,
 	16790,
 	16790,
@@ -532,7 +559,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	170,
+	179,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

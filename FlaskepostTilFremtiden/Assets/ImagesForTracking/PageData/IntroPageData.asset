@@ -18,7 +18,7 @@ MonoBehaviour:
   followupText: 
   showContinueButton: 1
   continueTexts:
-  - "Scan det n\xE6ste symbol n\xE5r du har l\xE6st siden f\xE6rdig, og oplev bogen
+  - "Scan det n\xE6ste symbol n\xE5r du har l\xE6st siden f\xE6rdig, \nog oplev bogen
     komme til live i 3D!"
   - "Husk at have t\xE6ndt for telefonens lyd."
   returnToScanningAfterTexts: 1

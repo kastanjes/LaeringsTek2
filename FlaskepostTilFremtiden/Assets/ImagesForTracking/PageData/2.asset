@@ -22,5 +22,5 @@ MonoBehaviour:
   - "Hvor f\xF8ler du dig tryg?"
   - "Hvordan kan man hj\xE6lpe andre, s\xE5 de ogs\xE5 f\xF8ler sig trygge?"
   returnToScanningAfterTexts: 1
-  arPrefab: {fileID: 4613282214004637291, guid: c80028760c3b06f4c93f9459e65e003c, type: 3}
+  arPrefab: {fileID: 5158110740118894929, guid: 75e7d66c0da635f47a61db064365aab6, type: 3}
   audioClip: {fileID: 8300000, guid: e04c677607938ed40a08e6186c3c4f7e, type: 3}
