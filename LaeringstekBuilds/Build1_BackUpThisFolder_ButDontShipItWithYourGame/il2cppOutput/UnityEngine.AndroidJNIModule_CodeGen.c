@@ -548,6 +548,7 @@ extern void PermissionCallbacks_Invoke_m854C0748805F945A4A16C0C8403AAB10B844D7A8
 extern void PermissionCallbacks_onPermissionResult_m2AD8CAA2CAA8BD91CEAA55F2F4B142FDB755FCBC (void);
 extern void Permission_GetUnityPermissions_m6A22A923A8B036209E6218E24F7AA8CA79AA15BD (void);
 extern void Permission_HasUserAuthorizedPermission_mF4C90E13124E28F6F672200E489CC25A9B645B8B (void);
+extern void Permission_RequestUserPermission_mF9CF3A21AAF34B311137C4D00B3AD6A6C2694242 (void);
 extern void Permission_RequestUserPermissions_m09FE74BF5829C8B48A0E6C9B7F7846FEE763D2DA (void);
 extern void AndroidLocale_get_country_m4CF55D4A3CFD71553C727DB60A539CBD1D732456 (void);
 extern void AndroidLocale_get_language_m78BC34CC08937A1B4B6B70518179902C0824AA73 (void);
@@ -582,7 +583,7 @@ extern void AndroidConfiguration_get_screenLayoutSize_mA18253406CBD702D355073E0F
 extern void AndroidConfiguration_get_uiModeNight_m3561F470AF4D4BC9AFC6583DE93F861CF8FFEFEC (void);
 extern void AndroidConfiguration_get_uiModeType_mCC57F1E35C09495E9A3FD7CBD57778131E4A4D8E (void);
 extern void AndroidConfiguration_ToString_mFCA4EDDA524358A9BD9D83833DD2A0124DEADB45 (void);
-static Il2CppMethodPointer s_methodPointers[619] = 
+static Il2CppMethodPointer s_methodPointers[620] = 
 {
 	AndroidJNIHelper_get_debug_m0F67D4E412EBE1D511C42F5F12294C63E669C907,
 	AndroidJNIHelper_set_debug_m66E40D20DC9DC69BD7B139DA5C367BA1185FCA3F,
@@ -1169,6 +1170,7 @@ static Il2CppMethodPointer s_methodPointers[619] =
 	PermissionCallbacks_onPermissionResult_m2AD8CAA2CAA8BD91CEAA55F2F4B142FDB755FCBC,
 	Permission_GetUnityPermissions_m6A22A923A8B036209E6218E24F7AA8CA79AA15BD,
 	Permission_HasUserAuthorizedPermission_mF4C90E13124E28F6F672200E489CC25A9B645B8B,
+	Permission_RequestUserPermission_mF9CF3A21AAF34B311137C4D00B3AD6A6C2694242,
 	Permission_RequestUserPermissions_m09FE74BF5829C8B48A0E6C9B7F7846FEE763D2DA,
 	AndroidLocale_get_country_m4CF55D4A3CFD71553C727DB60A539CBD1D732456,
 	AndroidLocale_get_language_m78BC34CC08937A1B4B6B70518179902C0824AA73,
@@ -1211,7 +1213,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] =
 	{ 0x06000139, JStringBinding_ToString_mD50BA7AA65F37BF1CD48CCAF39BCCDD91C2B9051_AdjustorThunk },
 	{ 0x0600013A, JStringBinding_Dispose_m4182F892B4BFDAF1271D9FCAF22B7B3A4483ACE5_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[619] = 
+static const int32_t s_InvokerIndices[620] = 
 {
 	28948,
 	27760,
@@ -1798,6 +1800,7 @@ static const int32_t s_InvokerIndices[619] =
 	12707,
 	29004,
 	26939,
+	27775,
 	24721,
 	16570,
 	16570,
@@ -2077,7 +2080,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AndroidJNIModule_CodeGen
 const Il2CppCodeGenModule g_UnityEngine_AndroidJNIModule_CodeGenModule = 
 {
 	"UnityEngine.AndroidJNIModule.dll",
-	619,
+	620,
 	s_methodPointers,
 	2,
 	s_adjustorThunks,
