@@ -19,9 +19,11 @@ MonoBehaviour:
   showContinueButton: 1
   continueTexts:
   - "B\xF8rnene er ved at give op, og fryser fast."
-  - "Har du nogensinde pr\xF8vet at give op?"
+  - "Har du nogensinde pr\xF8vet at give op {navn1}?"
+  - "Har du nogensinde pr\xF8vet at give op {navn2}?"
   - "Hvordan kan man hj\xE6lpe nogle der sidder fast, eller har lyst til at give
     op?"
   returnToScanningAfterTexts: 1
+  showSTTPanelAfterTexts: 0
   arPrefab: {fileID: 1857233053439791749, guid: 11597d9da7143904d9dbac9548680166, type: 3}
   audioClip: {fileID: 8300000, guid: ef3ba11b8bf65e74295b9d2e29907326, type: 3}

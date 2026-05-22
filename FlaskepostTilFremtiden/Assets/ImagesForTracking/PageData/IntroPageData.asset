@@ -19,8 +19,12 @@ MonoBehaviour:
   showContinueButton: 1
   continueTexts:
   - "Scan det n\xE6ste symbol n\xE5r du har l\xE6st siden f\xE6rdig, \nog oplev bogen
-    komme til live i 3D!"
-  - "Husk at have t\xE6ndt for telefonens lyd."
+    komme til live i 3D."
+  - "Refleksionssp\xF8rgsm\xE5lene undervejs er til jer begge \u2013 der er ingen
+    rigtige eller forkerte svar."
+  - "Husk at have t\xE6ndt for telefonens lyd en \u2013 Bluetooth-h\xF8jttaler giver
+    den bedste oplevelse.\n"
   returnToScanningAfterTexts: 1
+  showSTTPanelAfterTexts: 0
   arPrefab: {fileID: 0}
   audioClip: {fileID: 0}

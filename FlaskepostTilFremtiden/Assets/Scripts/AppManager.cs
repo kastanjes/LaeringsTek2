@@ -15,6 +15,7 @@ public class AppManager : MonoBehaviour
     private AppState currentState = AppState.Scanning;
     private int currentContinueIndex = 0;
     private string currentImageName;
+    private bool letterSent = false;
 
 
     private void Start()
@@ -88,21 +89,45 @@ public class AppManager : MonoBehaviour
 
         if (currentPage.continueTexts != null && currentContinueIndex < currentPage.continueTexts.Count)
         {
-            uiManager.ShowCustomText(currentPage.continueTexts[currentContinueIndex]);
+            string text = currentPage.continueTexts[currentContinueIndex]
+                .Replace("{navn1}", PlayerData.Name1)
+                .Replace("{navn2}", PlayerData.Name2);
+            uiManager.ShowCustomText(text);
             currentContinueIndex++;
             return;
         }
 
-        if (currentPage.returnToScanningAfterTexts)
+        if (currentPage.showSTTPanelAfterTexts && !letterSent)
+        {
+            uiManager.ShowSTTPanel();
+            return;
+        }
+
+        if (letterSent || currentPage.returnToScanningAfterTexts)
         {
             ResetToScanning();
         }
+    }
+
+    public void OnSendLetterPressed()
+    {
+        letterSent = true;
+
+        if (uiManager != null)
+            uiManager.SendLetter();
+    }
+
+    public void OnMutePressed()
+    {
+        if (audioManager != null)
+            audioManager.ToggleMute();
     }
 
     public void ResetToScanning()
     {
         currentPage = null;
         currentContinueIndex = 0;
+        letterSent = false;
 
         if (arContentManager != null)
             arContentManager.ClearContent();

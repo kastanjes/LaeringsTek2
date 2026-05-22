@@ -19,8 +19,10 @@ MonoBehaviour:
   showContinueButton: 1
   continueTexts:
   - "H\xE9r i huset bor b\xF8rnene, og det er her de f\xF8ler sig trygge."
-  - "Hvor f\xF8ler du dig tryg?"
+  - "Hvor f\xF8ler du dig tryg {navn1}?"
+  - "Hvor f\xF8ler du dig tryg {navn2}?"
   - "Hvordan kan man hj\xE6lpe andre, s\xE5 de ogs\xE5 f\xF8ler sig trygge?"
   returnToScanningAfterTexts: 1
+  showSTTPanelAfterTexts: 0
   arPrefab: {fileID: 5158110740118894929, guid: 75e7d66c0da635f47a61db064365aab6, type: 3}
   audioClip: {fileID: 8300000, guid: e04c677607938ed40a08e6186c3c4f7e, type: 3}

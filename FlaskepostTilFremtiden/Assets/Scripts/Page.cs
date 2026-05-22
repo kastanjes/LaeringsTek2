@@ -18,6 +18,7 @@ public class Page : ScriptableObject
     [Header("Continue Flow")]
     [TextArea] public List<string> continueTexts = new List<string>();
     public bool returnToScanningAfterTexts = true;
+    public bool showSTTPanelAfterTexts = false;
 
     [Header("AR")]
     public GameObject arPrefab;

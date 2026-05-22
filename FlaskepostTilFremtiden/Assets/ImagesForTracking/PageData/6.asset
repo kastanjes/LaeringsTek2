@@ -18,9 +18,11 @@ MonoBehaviour:
   followupText: 
   showContinueButton: 1
   continueTexts:
-  - '"Du har fundet mig!" siger flaskeposten'
-  - "\"Vi skal hj\xE6lpe b\xF8rnene\""
-  - "\"Vi kan hj\xE6lpe, du og jeg!\""
-  returnToScanningAfterTexts: 1
+  - '"{navn1} og {navn2}, i har fundet mig!" siger flaskeposten'
+  - "\"Jeg b\xE6rer b\xF8rnenes budskab. De har brug for hj\xE6lp \u2013 men for
+    at hj\xE6lpe dem, skal I, {navn1} og {navn2}, sende jeres eget brev til dem\""
+  - "\"Tryk p\xE5 mikrofonen, og tal \u2013 jeg b\xE6rer jeres ord videre\""
+  returnToScanningAfterTexts: 0
+  showSTTPanelAfterTexts: 1
   arPrefab: {fileID: 1554958722617872509, guid: fe9d19e7ff1d1ee47b8f8ba86458327b, type: 3}
   audioClip: {fileID: 0}

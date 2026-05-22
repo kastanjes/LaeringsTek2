@@ -3,6 +3,18 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Name Input")]
+    [SerializeField] private TMP_InputField nameInput1;
+    [SerializeField] private TMP_InputField nameInput2;
+
+    private void Start()
+    {
+        if (nameInput1 != null)
+            nameInput1.onValueChanged.AddListener(val => PlayerData.Name1 = val);
+        if (nameInput2 != null)
+            nameInput2.onValueChanged.AddListener(val => PlayerData.Name2 = val);
+    }
+
     [Header("Panels")]
     [SerializeField] private GameObject scanningPanel;
     [SerializeField] private GameObject introPanel;
@@ -15,6 +27,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject introTextObject;
     [SerializeField] private GameObject followupTextObject;
 
+    [Header("STT Panel")]
+    [SerializeField] private GameObject sttPanel;
+
+
 
     public void HideAllUI()
     {
@@ -26,6 +42,35 @@ public class UIManager : MonoBehaviour
 
         if (persistentUI != null)
             persistentUI.SetActive(false);
+
+        if (sttPanel != null)
+            sttPanel.SetActive(false);
+    }
+
+    public void ShowSTTPanel()
+    {
+        HideAllUI();
+
+        if (sttPanel != null)
+            sttPanel.SetActive(true);
+    }
+
+    public void SendLetter()
+    {
+        if (sttPanel != null)
+            sttPanel.SetActive(false);
+
+        if (followupTextObject != null)
+            followupTextObject.SetActive(false);
+
+        if (followupTextLabel != null)
+            followupTextLabel.text = "";
+
+        if (persistentUI != null)
+            persistentUI.SetActive(true);
+
+        if (continueButton != null)
+            continueButton.SetActive(true);
     }
 
     public void ShowScanningUI()
