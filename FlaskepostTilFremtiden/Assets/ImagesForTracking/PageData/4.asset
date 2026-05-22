@@ -19,10 +19,12 @@ MonoBehaviour:
   showContinueButton: 1
   continueTexts:
   - "B\xF8rnene er ved at give op, og fryser fast."
-  - "Har du nogensinde pr\xF8vet at give op {navn1}?"
-  - "Har du nogensinde pr\xF8vet at give op {navn2}?"
-  - "Hvordan kan man hj\xE6lpe nogle der sidder fast, eller har lyst til at give
-    op?"
+  - "Synes du b\xF8rnene skal blive ved \u2013 eller forst\xE5r du godt, at de har
+    lyst til at give op, {navn1}"
+  - "Kender du den f\xF8lelse, {navn2}? At noget er s\xE5 sv\xE6rt, at man bare vil
+    stoppe?"
+  - "Hvad tror I b\xF8rnene har brug for nu \u2013 og hvad ville I selv have brug
+    for?"
   returnToScanningAfterTexts: 1
   showSTTPanelAfterTexts: 0
   arPrefab: {fileID: 1857233053439791749, guid: 11597d9da7143904d9dbac9548680166, type: 3}

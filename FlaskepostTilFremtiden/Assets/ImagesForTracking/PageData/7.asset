@@ -19,8 +19,8 @@ MonoBehaviour:
   showContinueButton: 1
   continueTexts:
   - Flaskeposten med jeres brev har fundet vej til pigen!
-  - "Tak fordi I fulgte med i AR-oplevelsen \u2013 Et hav af f\xF8lelser.\nDenne
-    app er en prototype udviklet i samarbejde med Aarhus musikskole."
+  - "Tak, {navn1} og {navn2}, fordi I fulgte med i AR-oplevelsen \u2013 Et hav af
+    f\xF8lelser.\nDenne app er en prototype udviklet i samarbejde med Aarhus musikskole."
   returnToScanningAfterTexts: 1
   showSTTPanelAfterTexts: 0
   arPrefab: {fileID: 6377808664573784073, guid: 2491c34862990d14e84c0bf3df3c8d1f, type: 3}
