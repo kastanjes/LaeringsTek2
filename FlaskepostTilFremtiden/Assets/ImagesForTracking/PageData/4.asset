@@ -19,10 +19,10 @@ MonoBehaviour:
   showContinueButton: 1
   continueTexts:
   - "B\xF8rnene er ved at give op, og fryser fast."
-  - "Synes du b\xF8rnene skal blive ved \u2013 eller forst\xE5r du godt, at de har
-    lyst til at give op, {navn1}"
-  - "Kender du den f\xF8lelse, {navn2}? At noget er s\xE5 sv\xE6rt, at man bare vil
-    stoppe?"
+  - "Synes du b\xF8rnene skal blive ved \u2013 eller forst\xE5r \ndu godt, at de
+    har lyst til at give op, {navn1}?"
+  - "Kender du den f\xF8lelse, {navn2}? \nAt noget er s\xE5 sv\xE6rt, at man bare
+    vil stoppe?"
   - "Hvad tror I b\xF8rnene har brug for nu \u2013 og hvad ville I selv have brug
     for?"
   returnToScanningAfterTexts: 1
