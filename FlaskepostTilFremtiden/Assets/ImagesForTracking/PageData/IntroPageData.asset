@@ -18,8 +18,8 @@ MonoBehaviour:
   followupText: 
   showContinueButton: 1
   continueTexts:
-  - "Scan det n\xE6ste symbol n\xE5r du har l\xE6st siden f\xE6rdig, \nog oplev bogen
-    komme til live i 3D."
+  - "Scan siden n\xE5r du ser et symbol,\nog oplev bogen komme til live i 3D!"
+  - "L\xE6s siden helt f\xE6rdig, inden du scanner med telefonen.\n"
   - "Refleksionssp\xF8rgsm\xE5lene undervejs er til jer \nbegge \u2013 der er ingen
     rigtige eller forkerte svar."
   - "Husk at have t\xE6ndt for telefonens lyd.\nEn Bluetooth-h\xF8jttaler giver den
