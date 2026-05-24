@@ -11,16 +11,36 @@ public class AppManager : MonoBehaviour
     [SerializeField] private ARContentManager arContentManager;
     [SerializeField] private AudioManager audioManager;
 
+    [Header("Hint System")]
+    [SerializeField] private float hintDelay = 15f;
+
     private Page currentPage;
     private AppState currentState = AppState.Scanning;
     private int currentContinueIndex = 0;
     private string currentImageName;
     private bool letterSent = false;
 
+    private float _scanTimer = 0f;
+    private bool _hintShowing = false;
+
 
     private void Start()
     {
         SetState(AppState.Scanning, null);
+    }
+
+    private void Update()
+    {
+        if (currentState != AppState.Scanning) return;
+
+        _scanTimer += Time.deltaTime;
+
+        if (!_hintShowing && _scanTimer >= hintDelay)
+        {
+            _hintShowing = true;
+            if (uiManager != null)
+                uiManager.ShowHint();
+        }
     }
 
     public void HandleTrackedImage(string imageName, Transform imageTransform)
@@ -38,18 +58,29 @@ public class AppManager : MonoBehaviour
             return;
         }
 
+        // Nulstil hint-timer ved vellykket scanning
+        _scanTimer = 0f;
+        _hintShowing = false;
+        if (uiManager != null)
+            uiManager.HideHint();
+
         currentImageName = imageName;
-
         currentPage = foundPage;
-
         currentContinueIndex = 0;
-        
+
         SetState(currentPage.appState, imageTransform);
     }
 
     private void SetState(AppState newState, Transform imageTransform)
     {
         currentState = newState;
+
+        // Nulstil timer når vi går til scanning, stop timer ved andre tilstande
+        if (newState == AppState.Scanning)
+        {
+            _scanTimer = 0f;
+            _hintShowing = false;
+        }
 
         if (uiManager != null)
             uiManager.HideAllUI();

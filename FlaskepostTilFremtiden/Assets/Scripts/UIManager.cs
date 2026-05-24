@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -29,8 +30,38 @@ public class UIManager : MonoBehaviour
 
     [Header("STT Panel")]
     [SerializeField] private GameObject sttPanel;
+    [SerializeField] private CanvasGroup sttCanvasGroup;
+    [SerializeField] private float sttFadeDuration = 4f;
+    private Coroutine _sttFadeCoroutine;
+
+    [Header("Info Button")]
+    [SerializeField] private GameObject infoTextObject;
+    private bool _infoTextVisible = false;
+
+    [Header("Hint System")]
+    [SerializeField] private GameObject hintPanel;
 
 
+
+    public void ToggleInfoText()
+    {
+        if (infoTextObject == null) return;
+
+        _infoTextVisible = !_infoTextVisible;
+        infoTextObject.SetActive(_infoTextVisible);
+    }
+
+    public void ShowHint()
+    {
+        if (hintPanel != null)
+            hintPanel.SetActive(true);
+    }
+
+    public void HideHint()
+    {
+        if (hintPanel != null)
+            hintPanel.SetActive(false);
+    }
 
     public void HideAllUI()
     {
@@ -44,21 +75,63 @@ public class UIManager : MonoBehaviour
             persistentUI.SetActive(false);
 
         if (sttPanel != null)
+        {
+            if (_sttFadeCoroutine != null)
+            {
+                StopCoroutine(_sttFadeCoroutine);
+                _sttFadeCoroutine = null;
+            }
+            if (sttCanvasGroup != null)
+                sttCanvasGroup.alpha = 1f;
             sttPanel.SetActive(false);
+        }
+
+        if (followupTextObject != null)
+            followupTextObject.SetActive(false);
+
+        HideHint();
     }
 
     public void ShowSTTPanel()
     {
         HideAllUI();
 
+        if (sttCanvasGroup != null)
+            sttCanvasGroup.alpha = 1f;
+
         if (sttPanel != null)
             sttPanel.SetActive(true);
+    }
+
+    private IEnumerator FadeOutSTTPanel()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < sttFadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            if (sttCanvasGroup != null)
+                sttCanvasGroup.alpha = 1f - (elapsed / sttFadeDuration);
+            yield return null;
+        }
+
+        if (sttPanel != null)
+            sttPanel.SetActive(false);
+
+        if (sttCanvasGroup != null)
+            sttCanvasGroup.alpha = 1f;
+
+        _sttFadeCoroutine = null;
     }
 
     public void SendLetter()
     {
         if (sttPanel != null)
-            sttPanel.SetActive(false);
+        {
+            if (_sttFadeCoroutine != null)
+                StopCoroutine(_sttFadeCoroutine);
+            _sttFadeCoroutine = StartCoroutine(FadeOutSTTPanel());
+        }
 
         if (followupTextObject != null)
             followupTextObject.SetActive(false);

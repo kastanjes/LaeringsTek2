@@ -18,10 +18,16 @@ MonoBehaviour:
   followupText: 
   showContinueButton: 1
   continueTexts:
-  - Flaskeposten med jeres brev har fundet vej til pigen!
-  - "Tak, {navn1} og {navn2}, fordi I fulgte med i \nAR-oplevelsen \u2013 Et hav
-    af f\xF8lelser.\nDenne app er en prototype udviklet i samarbejde med Aarhus musikskole."
+  - "H\xF8r lydfort\xE6llingen f\xE6rdig, f\xF8r i trykker \"Forts\xE6t\"."
+  - "B\xF8rnene er ved at give op, og fryser fast."
+  - "Synes du b\xF8rnene skal blive ved \u2013 eller \nforst\xE5r du godt, at de
+    har lyst til at give op, {navn1}?"
+  - "Kender du den f\xF8lelse, {navn2}? \nAt noget er s\xE5 sv\xE6rt, at man hellere
+    vil fokusere p\xE5 noget andet?"
+  - "Hvad tror I b\xF8rnene har brug for nu \n\u2013 og hvad ville I selv have brug
+    for?"
   returnToScanningAfterTexts: 1
   showSTTPanelAfterTexts: 0
-  arPrefab: {fileID: 6377808664573784073, guid: 2491c34862990d14e84c0bf3df3c8d1f, type: 3}
-  audioClip: {fileID: 8300000, guid: e04c677607938ed40a08e6186c3c4f7e, type: 3}
+  arPrefab: {fileID: 1857233053439791749, guid: 11597d9da7143904d9dbac9548680166, type: 3}
+  audioClip: {fileID: 8300000, guid: 63d029b49efa2b74fa11c7e9d7d7ee2f, type: 3}
+  loopAudio: 0

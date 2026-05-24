@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
 
         musicSource.Stop();
         musicSource.clip = newClip;
-        musicSource.loop = true;
+        musicSource.loop = page.loopAudio;
         musicSource.Play();
 
         currentClip = newClip;

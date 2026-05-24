@@ -13,19 +13,18 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: Assembly-CSharp::Page
   imageName: 4
-  appState: 2
+  appState: 0
   uiPageType: 0
   followupText: 
-  showContinueButton: 1
+  showContinueButton: 0
   continueTexts:
-  - "B\xF8rnene er ved at give op, og fryser fast."
-  - "Synes du b\xF8rnene skal blive ved \u2013 eller forst\xE5r \ndu godt, at de
-    har lyst til at give op, {navn1}?"
-  - "Kender du den f\xF8lelse, {navn2}? \nAt noget er s\xE5 sv\xE6rt, at man bare
-    vil stoppe?"
-  - "Hvad tror I b\xF8rnene har brug for nu \u2013 og hvad ville I selv have brug
-    for?"
+  - "B\xF8rnene husker ingenting \u2013 ikke engang deres egne navne."
+  - "Hvar du {navn2}, nogensinde pr\xF8vet at f\xF8le at du var blevet v\xE6k, \neller
+    at du m\xE5ske havde glemt noget vigtigt?"
+  - "Hvis du mistede dine minder, {navn1} \n\u2013 hvad ville du savne mest?"
+  - "Hvordan tror i at b\xF8rnene kan komme \ntil at huske de ting de har glemt?"
   returnToScanningAfterTexts: 1
   showSTTPanelAfterTexts: 0
-  arPrefab: {fileID: 1857233053439791749, guid: 11597d9da7143904d9dbac9548680166, type: 3}
+  arPrefab: {fileID: 2089193097275863722, guid: 1471297f0af35c24eb5a95d51914fcdc, type: 3}
   audioClip: {fileID: 8300000, guid: ef3ba11b8bf65e74295b9d2e29907326, type: 3}
+  loopAudio: 1

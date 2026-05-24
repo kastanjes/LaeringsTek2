@@ -25,4 +25,5 @@ public class Page : ScriptableObject
 
     [Header("Audio")]
     public AudioClip audioClip;
+    public bool loopAudio = true;
 }
