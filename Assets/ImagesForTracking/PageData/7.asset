@@ -28,6 +28,6 @@ MonoBehaviour:
     for?"
   returnToScanningAfterTexts: 1
   showSTTPanelAfterTexts: 0
-  arPrefab: {fileID: 1857233053439791749, guid: 11597d9da7143904d9dbac9548680166, type: 3}
+  arPrefab: {fileID: 2089193097275863722, guid: 5ffd7569c5877f04fa92fbdb4e989a0b, type: 3}
   audioClip: {fileID: 8300000, guid: 63d029b49efa2b74fa11c7e9d7d7ee2f, type: 3}
   loopAudio: 0

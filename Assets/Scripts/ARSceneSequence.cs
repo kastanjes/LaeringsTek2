@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class ARSceneSequence : MonoBehaviour
@@ -10,17 +9,16 @@ public class ARSceneSequence : MonoBehaviour
     [Header("Optional VFX")]
     [SerializeField] private GameObject vfxObject;
 
+    [Header("Animations")]
+    [SerializeField] private string girlTrigger;
+    [SerializeField] private string boyTrigger;
+
     private void Start()
     {
-        StartCoroutine(PlaySequence());
-    }
+        if (girlAnimator != null && !string.IsNullOrEmpty(girlTrigger))
+            girlAnimator.SetTrigger(girlTrigger);
 
-    private IEnumerator PlaySequence()
-    {
-        // Step 1
-        girlAnimator.SetTrigger("Lay");
-        boyAnimator.SetTrigger("Sitting");
-
-        yield return new WaitForSeconds(2f);
+        if (boyAnimator != null && !string.IsNullOrEmpty(boyTrigger))
+            boyAnimator.SetTrigger(boyTrigger);
     }
 }

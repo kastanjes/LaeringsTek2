@@ -20,7 +20,7 @@ MonoBehaviour:
   continueTexts:
   - "(Husk at l\xE6s hele teksten p\xE5 siden f\xE6rdig, f\xF8r i forts\xE6tter)"
   - "H\xE9r i huset bor b\xF8rnene, og det er her \nde f\xF8ler sig trygge."
-  - "Hvor f\xF8ler du dig allermeest tryg {navn1}?"
+  - "Hvor f\xF8ler du dig allermest tryg {navn1}?"
   - "Hvad kan g\xF8re at du f\xF8ler dig tryg {navn2}?"
   - "Hvordan kan man hj\xE6lpe andre, s\xE5 \nde ogs\xE5 f\xF8ler sig trygge?"
   returnToScanningAfterTexts: 1

@@ -24,6 +24,6 @@ MonoBehaviour:
     musikskole."
   returnToScanningAfterTexts: 1
   showSTTPanelAfterTexts: 0
-  arPrefab: {fileID: 6377808664573784073, guid: 2491c34862990d14e84c0bf3df3c8d1f, type: 3}
-  audioClip: {fileID: 8300000, guid: e04c677607938ed40a08e6186c3c4f7e, type: 3}
+  arPrefab: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 53c0d43ec271a1e4dabf78a10d22b9af, type: 3}
   loopAudio: 1

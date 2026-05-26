@@ -20,5 +20,6 @@ MonoBehaviour:
   continueTexts: []
   returnToScanningAfterTexts: 1
   showSTTPanelAfterTexts: 0
-  arPrefab: {fileID: 6713829004114827741, guid: 08ec408a6ae358a4b9f34f9b4657b571, type: 3}
-  audioClip: {fileID: 8300000, guid: e04c677607938ed40a08e6186c3c4f7e, type: 3}
+  arPrefab: {fileID: 821518168888671054, guid: 08ec408a6ae358a4b9f34f9b4657b571, type: 3}
+  audioClip: {fileID: 8300000, guid: ef3ba11b8bf65e74295b9d2e29907326, type: 3}
+  loopAudio: 1
